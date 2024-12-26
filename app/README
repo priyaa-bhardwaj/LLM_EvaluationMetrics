@@ -1,0 +1,17 @@
+The METEOR (Metric for Evaluation of Translation with Explicit Ordering) scorer is more comprehensive since it calculates scores by assessing both precision (n-gram matches) and recall (n-gram overlaps), adjusted for word order differences between LLM outputs and expected outputs. It also leverages external linguistic databases like WordNet to account for synonyms. The final score is the harmonic mean of precision and recall, with a penalty for ordering discrepancies.
+
+Levenshtein distance (or edit distance, you probably recognize this as a LeetCode hard DP problem) scorer calculates the minimum number of single-character edits (insertions, deletions, or substitutions) required to change one word or text string into another, which can be useful for evaluating spelling corrections, or other tasks where the precise alignment of characters is critical.
+
+The BERTScore metric uses pre-trained models to compute similarity based on contextual word embeddings. If the sentences are too short, too different, or don't contain enough meaningful word overlap, the BERTScore values might be near zero.
+
+
+
+References:
+
+https://www.linkedin.com/pulse/evaluating-gpt-2-language-model-step-by-step-guide-david-adamson-mbcs/
+
+https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation#gptscore
+
+https://chatgpt.com
+
+youtube
